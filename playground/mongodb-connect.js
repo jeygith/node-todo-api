@@ -1,4 +1,12 @@
-const MongoClient = require('mongodb').MongoClient;
+// const MongoClient = require('mongodb').MongoClient;
+
+const {MongoClient, ObjectID} = require('mongodb');
+
+var obj = new ObjectID();
+
+var user = {name: 'jeff', age: 26};
+
+var {name} = user;
 
 MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     if (err) {
@@ -29,6 +37,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
         }
 
         console.log(JSON.stringify(result.ops, undefined, 2));
+        console.log(result.ops[0]._id.getTimestamp())
     })
 
     db.close();
