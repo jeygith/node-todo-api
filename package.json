@@ -17,7 +17,7 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
-    "mongodb": "^2.2.5",
+    "mongodb": "^3.1.13",
     "mongoose": "^5.6.7",
     "validator": "^11.1.0"
   },
